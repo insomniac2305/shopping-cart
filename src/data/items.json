@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Item 1",
+    "description": "Longer item description text",
+    "price": 9.99,
+    "images": ["../images/test1.jpg"]
+  },
+  {
+    "id": 2,
+    "name": "Item 2",
+    "description": "Longer item description text",
+    "price": 19.99,
+    "images": ["../images/test2.jpg"]
+  },
+  {
+    "id": 3,
+    "name": "Item 3",
+    "description": "Longer item description text",
+    "price": 29.99,
+    "images": ["../images/test3.jpg"]
+  }
+]
