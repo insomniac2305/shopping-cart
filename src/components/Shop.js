@@ -5,6 +5,8 @@ function Shop({ items }) {
     return (
       <li key={item.id}>
         <Link to={item.id.toString()}>{item.name}</Link>
+        <input type="number" name={`count${item.id}`} id={`count${item.id}`} />
+        <button type="button">Add to cart</button>
       </li>
     );
   });
