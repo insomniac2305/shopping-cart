@@ -1,12 +1,10 @@
-import { Link } from "react-router-dom";
+import ShopItem from "./ShopItem";
 
-function Shop({ items }) {
+function Shop({ items, onAdd }) {
   const itemList = items.map((item) => {
     return (
       <li key={item.id}>
-        <Link to={item.id.toString()}>{item.name}</Link>
-        <input type="number" name={`count${item.id}`} id={`count${item.id}`} />
-        <button type="button">Add to cart</button>
+        <ShopItem id={item.id} name={item.name} onAdd={onAdd}/>
       </li>
     );
   });
