@@ -9,10 +9,13 @@ function Cart({ items, onAdd, onRemove }) {
     );
   });
 
+  const total = items.reduce((prev, cur) => prev + (cur.price * cur.count), 0).toFixed(2);
+
   return (
     <div>
       <h1>Cart</h1>
       <ul>{itemList}</ul>
+      <h3>Total: {total}$</h3>
     </div>
   );
 }
