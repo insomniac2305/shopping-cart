@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Cart from "./Cart";
 import Home from "./Home";
 import Item from "./Item";
@@ -39,16 +39,32 @@ function App() {
     setCartItems(newCartItems);
   };
 
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/shop" element={<Shop items={itemData} onAdd={addToCart} />} />
-        <Route path="/cart" element={<Cart items={cartItems} onAdd={addToCart} onRemove={removeFromCart} />} />
-        <Route path="/shop/:itemId" element={<Item onAdd={addToCart} />} />
-      </Routes>
-    </BrowserRouter>
-  );
+  const routes = [
+    {
+      path: "/",
+      element: <Home />,
+    },
+    {
+      path: "shop",
+      element: <Shop items={itemData} onAdd={addToCart} />,
+    },
+    {
+      path: "shop/:itemId",
+      element: <Item onAdd={addToCart} />,
+      loader: ({ params }) => {
+        const id = parseInt(params.itemId);
+        return itemData.find((it) => it.id === id);
+      },
+    },
+    {
+      path: "cart",
+      element: <Cart items={cartItems} onAdd={addToCart} onRemove={removeFromCart} />,
+    },
+  ];
+
+  const router = createBrowserRouter(routes);
+
+  return <RouterProvider router={router} />;
 }
 
 export default App;
