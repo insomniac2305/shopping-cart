@@ -1,10 +1,10 @@
-function Cart({ items }) {
+import CartItem from "./CartItem";
+
+function Cart({ items, onAdd, onRemove }) {
   const itemList = items.map((item) => {
     return (
       <li key={item.id}>
-        {item.name}
-        <input type="number" name={`count${item.id}`} id={`count${item.id}`} />
-        <button type="button">Remove from cart</button>
+        <CartItem id={item.id} name={item.name} count={item.count} onAdd={onAdd} onRemove={onRemove} />
       </li>
     );
   });
