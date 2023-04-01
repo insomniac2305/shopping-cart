@@ -12,11 +12,11 @@ function App() {
   const addToCart = (itemId, count) => {
     const cartItemIndex = cartItems.findIndex((it) => it.id === itemId);
     if (cartItemIndex === -1) {
-      const newItem = {
-        id: itemId,
-        count: count,
-      };
-      setCartItems([...cartItems, newItem]);
+      const newItem = itemData.find((it) => it.id === itemId);
+      if (newItem) {
+        newItem.count = count;
+        setCartItems([...cartItems, newItem]);
+      }
     } else {
       const newCartItems = [...cartItems];
       newCartItems[cartItemIndex].count += count;
