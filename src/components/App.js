@@ -1,10 +1,20 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Cart from "./Cart";
 import Home from "./Home";
 import Item from "./Item";
 import Shop from "./Shop";
 import itemData from "../data/items.json";
 import { useState } from "react";
+import NavBar from "./NavBar";
+
+function AppWrapper() {
+  return (
+    <div className="flex h-screen flex-col">
+      <NavBar/>
+      <Outlet/>
+    </div>
+  );
+}
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -42,23 +52,35 @@ function App() {
   const routes = [
     {
       path: "/",
-      element: <Home />,
-    },
-    {
-      path: "shop",
-      element: <Shop items={itemData} onAdd={addToCart} />,
-    },
-    {
-      path: "shop/:itemId",
-      element: <Item onAdd={addToCart} />,
-      loader: ({ params }) => {
-        const id = parseInt(params.itemId);
-        return itemData.find((it) => it.id === id);
-      },
-    },
-    {
-      path: "cart",
-      element: <Cart items={cartItems} onAdd={addToCart} onRemove={removeFromCart} />,
+      element: <AppWrapper />,
+      children: [
+        {
+          path: "/",
+          element: <Home />,
+        },
+        {
+          path: "shop",
+          element: <Shop items={itemData} onAdd={addToCart} />,
+        },
+        {
+          path: "shop/:itemId",
+          element: <Item onAdd={addToCart} />,
+          loader: ({ params }) => {
+            const id = parseInt(params.itemId);
+            return itemData.find((it) => it.id === id);
+          },
+        },
+        {
+          path: "cart",
+          element: (
+            <Cart
+              items={cartItems}
+              onAdd={addToCart}
+              onRemove={removeFromCart}
+            />
+          ),
+        },
+      ],
     },
   ];
 
