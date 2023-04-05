@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
-    <header className="shadow-md dark:bg-slate-950">
+    <header className="shadow-md bg-slate-950">
       <nav className="mx-auto flex max-w-screen-2xl flex-wrap items-center justify-between p-4">
         <Link
           to="/"
