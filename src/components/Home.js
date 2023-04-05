@@ -3,7 +3,7 @@ import MainImage from "../images/home.png";
 
 function Home() {
   return (
-    <div className="flex-1 bg-emerald-100 dark:bg-gray-900">
+    <div className="flex-1 bg-emerald-100 pb-5 dark:bg-gray-900">
       <main className="mx-auto flex max-w-screen-2xl flex-col items-center justify-center lg:flex-row">
         <img className="lg:order-2" src={MainImage} alt="Controller" />
         <section className="grid">

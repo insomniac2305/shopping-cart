@@ -6,12 +6,14 @@ import Shop from "./Shop";
 import itemData from "../data/items.json";
 import { useState } from "react";
 import NavBar from "./NavBar";
+import Footer from "./Footer";
 
 function AppWrapper() {
   return (
     <div className="flex h-screen flex-col">
-      <NavBar/>
-      <Outlet/>
+      <NavBar />
+      <Outlet />
+      <Footer />
     </div>
   );
 }
