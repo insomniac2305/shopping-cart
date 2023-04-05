@@ -1,23 +1,45 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import CountInput from "./CountInput";
+import { FaCartPlus } from "react-icons/fa";
 
-function ShopItem({ id, name, onAdd }) {
+function ShopItem({ id, name, image, onAdd }) {
   const [count, setCount] = useState(1);
 
+  const handleCountChange = (value) => {
+    const parsedValue = parseInt(value) || 1;
+    if (parsedValue > 0 && parsedValue < 100) {
+      setCount(parsedValue);
+    }
+  };
+
   return (
-    <>
-      <Link to={id.toString()}>{name}</Link>
-      <input
-        type="number"
-        name={`count${id}`}
-        id={`count${id}`}
-        value={count}
-        onChange={(e) => setCount(e.target.value)}
+    <article className="m-4 flex h-full flex-col items-center rounded-lg bg-white shadow-md dark:bg-slate-800">
+      <img
+        src={image}
+        alt={name}
+        className="h-52 w-full rounded-t-lg object-cover"
       />
-      <button type="button" onClick={() => onAdd(id, parseInt(count) || 0)}>
-        Add to cart
-      </button>
-    </>
+      <Link
+        to={id.toString()}
+        className="p-2 text-center font-bold dark:text-white"
+      >
+        {name}
+      </Link>
+      <div className="flex flex-col items-center gap-2">
+        <CountInput count={count} onChange={handleCountChange} />
+        <button
+          type="button"
+          onClick={() => onAdd(id, parseInt(count) || 0)}
+          className="flex h-8 w-24 items-center justify-center rounded-lg bg-violet-600 font-bold text-white transition hover:bg-violet-500 active:bg-violet-700"
+        >
+          <span className="text-xl">
+            <FaCartPlus />
+          </span>
+          &nbsp;Add
+        </button>
+      </div>
+    </article>
   );
 }
 
