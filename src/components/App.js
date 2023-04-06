@@ -1,7 +1,6 @@
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Cart from "./Cart";
 import Home from "./Home";
-import Item from "./Item";
 import Shop from "./Shop";
 import itemData from "../data/items.json";
 import { useState } from "react";
@@ -10,7 +9,7 @@ import Footer from "./Footer";
 
 function AppWrapper() {
   return (
-    <div className="flex h-screen flex-col">
+    <div className="flex min-h-screen flex-col">
       <NavBar />
       <Outlet />
       <Footer />
@@ -66,7 +65,7 @@ function App() {
         },
         {
           path: "shop/:itemId",
-          element: <Item onAdd={addToCart} />,
+          element: <Shop items={itemData} onAdd={addToCart} />,
           loader: ({ params }) => {
             const id = parseInt(params.itemId);
             return itemData.find((it) => it.id === id);

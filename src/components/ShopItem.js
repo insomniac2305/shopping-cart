@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import CountInput from "./CountInput";
 import { FaCartPlus } from "react-icons/fa";
+import Button from "./Button";
 
 function ShopItem({ id, name, image, onAdd }) {
   const [count, setCount] = useState(1);
@@ -15,29 +16,24 @@ function ShopItem({ id, name, image, onAdd }) {
 
   return (
     <article className="m-4 flex h-full flex-col rounded-lg bg-white shadow-md dark:bg-slate-800">
-      <img
-        src={image}
-        alt={name}
-        className="h-52 w-full rounded-t-lg object-cover"
-      />
       <Link
-        to={id.toString()}
-        className="overflow-hidden overflow-ellipsis whitespace-nowrap p-2 text-center font-bold dark:text-white"
+        to={`/shop/${id.toString()}`}
+        className="overflow-hidden overflow-ellipsis whitespace-nowrap text-center font-bold dark:text-white"
       >
-        {name}
+        <img
+          src={image}
+          alt={name}
+          className="h-52 w-full rounded-t-lg object-cover"
+        />
+        <h2 className="p-2">{name}</h2>
       </Link>
       <div className="flex flex-col gap-2 p-2">
         <CountInput count={count} onChange={handleCountChange} />
-        <button
-          type="button"
+        <Button
           onClick={() => onAdd(id, parseInt(count) || 0)}
-          className="flex h-8 items-center justify-center rounded-lg bg-violet-600 font-bold text-white transition hover:bg-violet-500 active:bg-violet-700"
-        >
-          <span className="text-xl">
-            <FaCartPlus />
-          </span>
-          &nbsp;Add to cart
-        </button>
+          Icon={FaCartPlus}
+          text="Add to cart"
+        />
       </div>
     </article>
   );

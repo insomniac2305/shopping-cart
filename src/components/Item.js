@@ -1,28 +1,36 @@
 import { useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { FaCartPlus } from "react-icons/fa";
+import Button from "./Button";
+import CountInput from "./CountInput";
 
-function Item({ onAdd }) {
-  const item = useLoaderData();
+function Item({ id, name, description, images, price, onAdd }) {
   const [count, setCount] = useState(1);
 
   return (
-    <>
-      <h1>{item.name}</h1>
-      <p>{item.description}</p>
-      <div>
-        Price: {item.price}€
-        <input
-          type="number"
-          name={`count${item.id}`}
-          id={`count${item.id}`}
-          value={count}
-          onChange={(e) => setCount(e.target.value)}
+    <div className="flex flex-col md:flex-row md:items-center">
+      <div className="self-center p-4 pt-8 md:pt-4 md:flex-auto md:w-3/5">
+        <img
+          src={images[0]}
+          alt={name}
+          className="max-h-96 w-full rounded-lg md:max-h-none"
         />
-        <button type="button" onClick={() => onAdd(item.id, parseInt(count) || 0)}>
-          Add to cart
-        </button>
       </div>
-    </>
+      <div className="flex flex-col gap-y-2 p-4 md:flex-auto md:w-2/5">
+        <h1 className="pb-2 text-2xl font-bold tracking-tight text-slate-800 dark:text-white">
+          {name}
+        </h1>
+        <p className="text-slate-600 dark:text-slate-300">{description}</p>
+        <p className="py-8 text-center text-2xl font-semibold text-slate-800 dark:text-white">
+          {price}$
+        </p>
+        <CountInput count={count} onChange={setCount} />
+        <Button
+          onClick={() => onAdd(id, parseInt(count) || 0)}
+          Icon={FaCartPlus}
+          text="Add to cart"
+        />
+      </div>
+    </div>
   );
 }
 
