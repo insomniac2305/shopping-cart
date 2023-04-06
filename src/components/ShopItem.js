@@ -14,7 +14,7 @@ function ShopItem({ id, name, image, onAdd }) {
   };
 
   return (
-    <article className="m-4 flex h-full flex-col items-center rounded-lg bg-white shadow-md dark:bg-slate-800">
+    <article className="m-4 flex h-full flex-col rounded-lg bg-white shadow-md dark:bg-slate-800">
       <img
         src={image}
         alt={name}
@@ -22,21 +22,21 @@ function ShopItem({ id, name, image, onAdd }) {
       />
       <Link
         to={id.toString()}
-        className="p-2 text-center font-bold dark:text-white"
+        className="overflow-hidden overflow-ellipsis whitespace-nowrap p-2 text-center font-bold dark:text-white"
       >
         {name}
       </Link>
-      <div className="flex flex-col items-center gap-2">
+      <div className="flex flex-col gap-2 p-2">
         <CountInput count={count} onChange={handleCountChange} />
         <button
           type="button"
           onClick={() => onAdd(id, parseInt(count) || 0)}
-          className="flex h-8 w-24 items-center justify-center rounded-lg bg-violet-600 font-bold text-white transition hover:bg-violet-500 active:bg-violet-700"
+          className="flex h-8 items-center justify-center rounded-lg bg-violet-600 font-bold text-white transition hover:bg-violet-500 active:bg-violet-700"
         >
           <span className="text-xl">
             <FaCartPlus />
           </span>
-          &nbsp;Add
+          &nbsp;Add to cart
         </button>
       </div>
     </article>
