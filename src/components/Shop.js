@@ -13,6 +13,7 @@ function Shop({ items, onAdd }) {
           id={it.id}
           name={it.name}
           image={it.images[0]}
+          price={it.price}
           onAdd={onAdd}
         />
       </li>
@@ -20,7 +21,7 @@ function Shop({ items, onAdd }) {
   });
 
   return (
-    <div className="flex justify-center bg-emerald-50 dark:bg-gray-900">
+    <div className="flex justify-center bg-emerald-50 dark:bg-gray-900 pb-8">
       <ul className="grid w-full max-w-screen-xl auto-rows-[21rem] grid-cols-[repeat(auto-fit,_minmax(15rem,_1fr))] gap-y-4">
         {itemList}
       </ul>

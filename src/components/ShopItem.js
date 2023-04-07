@@ -4,7 +4,7 @@ import CountInput from "./CountInput";
 import { FaCartPlus } from "react-icons/fa";
 import Button from "./Button";
 
-function ShopItem({ id, name, image, onAdd }) {
+function ShopItem({ id, name, image, price, onAdd }) {
   const [count, setCount] = useState(1);
 
   const handleCountChange = (value) => {
@@ -28,7 +28,10 @@ function ShopItem({ id, name, image, onAdd }) {
         <h2 className="p-2">{name}</h2>
       </Link>
       <div className="flex flex-col gap-2 p-2">
-        <CountInput count={count} onChange={handleCountChange} />
+        <div className="flex flex-row items-center justify-between">
+          <CountInput count={count} onChange={handleCountChange} />
+          <h3 className="font-semibold tracking-tighter text-lg dark:text-white ">{price*count}$</h3>
+        </div>
         <Button
           onClick={() => onAdd(id, parseInt(count) || 0)}
           Icon={FaCartPlus}
