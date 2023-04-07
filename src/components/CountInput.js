@@ -5,10 +5,7 @@ function CountInput({ count, onChange }) {
   const decrement = () => onChange(count - 1);
 
   return (
-    <div className="flex items-center justify-between">
-      <label htmlFor="Quantity" className="dark:text-white">
-        Quantity:
-      </label>
+    <div>
       <div className="flex h-8 items-center">
         <button
           type="button"
