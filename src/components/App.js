@@ -7,10 +7,10 @@ import { useState } from "react";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 
-function AppWrapper() {
+function AppWrapper({cartCount}) {
   return (
     <div className="flex min-h-screen flex-col">
-      <NavBar />
+      <NavBar cartCount={cartCount}/>
       <Outlet />
       <Footer />
     </div>
@@ -53,7 +53,7 @@ function App() {
   const routes = [
     {
       path: "/",
-      element: <AppWrapper />,
+      element: <AppWrapper cartCount={cartItems.length}/>,
       children: [
         {
           path: "/",
