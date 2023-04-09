@@ -25,7 +25,7 @@ function Shop({ items, onAdd }) {
       <ul className="grid w-full max-w-screen-xl auto-rows-[21rem] grid-cols-[repeat(auto-fit,_minmax(15rem,_1fr))] gap-y-4">
         {itemList}
       </ul>
-      <Modal isOpen={item} onClose={() => navigate("/shop")}>
+      <Modal isOpen={!!item} onClose={() => navigate("/shop")}>
         {item && (
           <Item
             id={item.id}
