@@ -33,7 +33,7 @@ function Item({ id, name, description, images, price, onAdd }) {
         <div className="flex flex-row items-center justify-between">
           <CountInput count={count} onChange={setCount} />
           <p className="text-2xl font-semibold text-slate-800 dark:text-white">
-            {price * count}$
+            {(price * count).toFixed(2)}$
           </p>
         </div>
         <Button
