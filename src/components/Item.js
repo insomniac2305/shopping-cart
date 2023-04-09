@@ -1,16 +1,26 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaCartPlus } from "react-icons/fa";
 import Button from "./Button";
 import CountInput from "./CountInput";
 
 function Item({ id, name, description, images, price, onAdd }) {
   const [count, setCount] = useState(1);
+  const [imgPath, setImgPath] = useState(null);
+
+  useEffect(() => {
+    const loadImage = async () => {
+      const loadedImg = await import(`../images/${images[0]}`);
+      setImgPath(loadedImg.default);
+    };
+
+    loadImage();
+  }, [images]);
 
   return (
     <div className="flex flex-col md:flex-row md:items-center">
       <div className="self-center p-4 pt-8 md:w-3/5 md:flex-auto md:pt-4">
         <img
-          src={images[0]}
+          src={imgPath}
           alt={name}
           className="max-h-96 w-full rounded-lg md:max-h-none"
         />
@@ -19,11 +29,11 @@ function Item({ id, name, description, images, price, onAdd }) {
         <h1 className="pb-2 text-2xl font-bold tracking-tight text-slate-800 dark:text-white">
           {name}
         </h1>
-        <p className="text-slate-600 dark:text-slate-300 pb-8">{description}</p>
+        <p className="pb-8 text-slate-600 dark:text-slate-300">{description}</p>
         <div className="flex flex-row items-center justify-between">
           <CountInput count={count} onChange={setCount} />
           <p className="text-2xl font-semibold text-slate-800 dark:text-white">
-            {price*count}$
+            {price * count}$
           </p>
         </div>
         <Button
