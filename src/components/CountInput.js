@@ -1,8 +1,15 @@
 import { FaPlus, FaMinus } from "react-icons/fa";
 
-function CountInput({ count, onChange }) {
-  const increment = () => onChange(count + 1);
-  const decrement = () => onChange(count - 1);
+function CountInput({ count, onChange, min, max }) {
+  const increment = () => handleCountChange(count + 1);
+  const decrement = () => handleCountChange(count - 1);
+
+  const handleCountChange = (value) => {
+    const parsedValue = parseInt(value) || 1;
+    if (parsedValue >= min && parsedValue <= max) {
+      onChange(parsedValue);
+    }
+  };
 
   return (
     <div>
@@ -19,7 +26,7 @@ function CountInput({ count, onChange }) {
           type="number"
           id="Quantity"
           value={count}
-          onChange={(e) => onChange(e.target.value)}
+          onChange={(e) => handleCountChange(e.target.value)}
           max="99"
           className="h-8 w-8 bg-transparent text-center font-semibold [-moz-appearance:_textfield] dark:text-white [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none"
         />
