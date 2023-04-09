@@ -22,7 +22,7 @@ function Item({ id, name, description, images, price, onAdd }) {
         <img
           src={imgPath}
           alt={name}
-          className="max-h-96 w-full rounded-lg md:max-h-none"
+          className="max-h-96 max-w-full rounded-lg md:max-h-[90vh] mx-auto"
         />
       </div>
       <div className="flex flex-col gap-y-2 p-4 md:w-2/5 md:flex-auto">
