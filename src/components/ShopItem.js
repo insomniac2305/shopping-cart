@@ -41,7 +41,7 @@ function ShopItem({ id, name, image, price, onAdd }) {
         <div className="flex flex-row items-center justify-between">
           <CountInput count={count} onChange={handleCountChange} />
           <h3 className="text-lg font-semibold tracking-tighter dark:text-white ">
-            {price * count}$
+            {(price * count).toFixed(2)}$
           </h3>
         </div>
         <Button
