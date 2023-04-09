@@ -1,23 +1,170 @@
 [
   {
     "id": 1,
-    "name": "Item 1",
-    "description": "Longer item description text",
-    "price": 9.99,
-    "images": ["../images/test1.jpg"]
+    "name": "God of War",
+    "price": 19.99,
+    "description": "God of War is the sequel to God of War III as well as a continuation of the canon God of War chronology. Unlike previous installments, this game focuses on Norse mythology and follows an older and more seasoned Kratos and his son Atreus in the years since the third game. It is in this harsh, unforgiving world that he must fight to survive… and teach his son to do the same.",
+    "images": ["a4c99594-88d8-4085-a9d4-5f3cd4a20fc8.jpg"]
   },
   {
     "id": 2,
-    "name": "Item 2",
-    "description": "Longer item description text",
-    "price": 19.99,
-    "images": ["../images/test2.jpg"]
+    "name": "Rocket League",
+    "price": 29.99,
+    "description": "Rocket League is a high-powered hybrid of arcade-style soccer and vehicular mayhem with easy-to-understand controls and fluid, physics-driven competition. Rocket League includes casual and competitive Online Matches, a fully-featured offline Season Mode, special “Mutators” that let you change the rules entirely, hockey and basketball-inspired Extra Modes, and more than 500 trillion possible cosmetic customization combinations.",
+    "images": ["c84f5897-8d55-446a-9861-889c860d670f.jpg"]
   },
   {
     "id": 3,
-    "name": "Item 3",
-    "description": "Longer item description text",
+    "name": "Minecraft",
+    "price": 39.99,
+    "description": "Minecraft focuses on allowing the player to explore, interact with, and modify a dynamically-generated map made of one-cubic-meter-sized blocks. In addition to blocks, the environment features plants, mobs, and items. Some activities in the game include mining for ore, fighting hostile mobs, and crafting new blocks and tools by gathering various resources found in the game. The game's open-ended model allows players to create structures, creations, and artwork on various multiplayer servers or their single-player maps. Other features include redstone circuits for logic computations and remote actions, minecarts and tracks, and a mysterious underworld called the Nether. A designated but completely optional goal of the game is to travel to a dimension called the End, and defeat the ender dragon.",
+    "images": ["c8095c78-d934-4876-b592-c250f3b242b4.jpg"]
+  },
+  {
+    "id": 4,
+    "name": "Hogwarts Legacy",
+    "price": 79.99,
+    "description": "Hogwarts Legacy is an immersive, open-world action RPG set in the world first introduced in the Harry Potter books. Now you can take control of the action and be at the center of your own adventure in the wizarding world. Embark on a journey through familiar and new locations as you explore and discover fantastic beasts, customize your character and craft potions, master spell casting, upgrade talents, and become the wizard you want to be. Discover the feeling of living at Hogwarts as you make allies, battle Dark wizards, and ultimately decide the fate of the wizarding world. Your legacy is what you make of it.",
+    "images": ["0ceb4279-4f04-44a7-8dfb-693a4a06cf25.png"]
+  },
+  {
+    "id": 5,
+    "name": "Elden Ring",
+    "price": 69.99,
+    "description": "Erhebt Euch, Befleckter, und lasst Euch von der Gnade leiten, um die Macht des Eldenrings zu befehligen und zum Eldenfürsten im Zwischenland zu werden.",
+    "images": ["51840f1a-1478-4a6e-9473-69478214de19.jpg"]
+  },
+  {
+    "id": 6,
+    "name": "Sea of Thieves",
+    "price": 39.99,
+    "description": "Sea of Thieves bietet euch das Piratenerlebnis schlechthin. Vom Segeln und Kämpfen bis hin zu Erkundungen und Beutezügen findet ihr alles, was zum waschechten Piratendasein dazugehört. Ohne festgesteckte Rollen habt ihr die Freiheit, der Welt und anderen Spielern so zu begegnen, wie ihr es wollt. Ob ihr nun als Gruppe oder alleine in See stecht, ihr begegnet in diesem Shared-World-Abenteuer anderen Crews – doch sind sie Freund oder Feind? Und wie werdet ihr reagieren?",
+    "images": ["f59c604c-c5c2-4746-a818-7ba34b5a6c8e.jpg"]
+  },
+  {
+    "id": 7,
+    "name": "Ghost of Tsushima",
+    "price": 79.99,
+    "description": "Uncover the hidden wonders of Tsushima in this open-world action adventure. Forge a new path and wage an unconventional war for the freedom of Tsushima. Challenge opponents with your katana, master the bow to eliminate distant threats, develop stealth tactics to ambush enemies in order to win over the mongols.",
+    "images": ["cc88d0a2-99e0-4398-acac-5af4141574e5.jpg"]
+  },
+  {
+    "id": 8,
+    "name": "Dead Cells",
+    "price": 24.99,
+    "description": "Dead Cells is a rogue-lite, metroidvania inspired, action-platformer. You'll explore a sprawling, ever-changing castle... assuming you’re able to fight your way past its keepers in 2D souls-lite combat. No checkpoints. Kill, die, learn, repeat.",
+    "images": ["b2d8851f-7a5f-4725-a5a5-4e4b511f9bbf.jpg"]
+  },
+  {
+    "id": 9,
+    "name": "A Plague Tale: Requiem",
+    "price": 59.99,
+    "description": "A Plague Tale: Requiem is an action-adventure game similar to its predecessor. The player assumes control of Amicia and must face against both soldiers from the French Inquisition and hordes of rats that are spreading the black plague. Gameplay is largely similar to the first game, though the combat system is significantly expanded. The game features a progression system in which the player will be awarded additional skills and abilities. Stealth players will unlock skills that allow them to sneak around more efficiently, while those who prefer a more lethal approach will unlock additional combat skills. Locations are also larger, giving players additional options to progress.",
+    "images": ["30d4fb5b-ec46-474e-a512-903bd9f9f26c.jpg"]
+  },
+  {
+    "id": 10,
+    "name": "No Man's Sky",
+    "price": 59.99,
+    "description": "Inspired by the adventure and imagination that we love from classic science-fiction, No Man's Sky presents you with a galaxy to explore, filled with unique planets and lifeforms, and constant danger and action. In No Man's Sky, every star is the light of a distant sun, each orbited by planets filled with life, and you can go to any of them you choose. Fly smoothly from deep space to planetary surfaces, with no loading screens, and no limits. In this infinite procedurally generated universe, you'll discover places and creatures that no other players have seen before - and perhaps never will again.",
+    "images": ["fd1982af-232b-4532-9bf8-4f1173c88a28.jpg"]
+  },
+  {
+    "id": 11,
+    "name": "Slay the spire",
+    "price": 9.99,
+    "description": "Wir haben Kartenspiele und Roguelikes vereint, um den bestmöglichen Singleplayer-Deckbauer zu erschaffen. Baue dein eigenes Deck, begegne bizarren Kreaturen, entdecke Relikte von unermesslicher Macht und kämpfe dich an die Spitze des Spires!",
+    "images": ["0e6a27a0-be6e-44ec-9774-fde6717c2f78.jpg"]
+  },
+  {
+    "id": 12,
+    "name": "Stray",
+    "price": 39.99,
+    "description": "Lost, alone, and separated from family, a stray cat must untangle an ancient mystery to escape a long-forgotten cybercity and find the way home.",
+    "images": ["9ddfbff5-e732-43fd-94e0-7c60cd63444b.jpg"]
+  },
+  {
+    "id": 13,
+    "name": "Deathloop",
+    "price": 59.99,
+    "description": "DEATHLOOP ist ein innovativer Next-Gen-FPS von Arkane Lyon, den preisgekrönten Machern von Dishonored. In DEATHLOOP sehen sich zwei rivalisierende Assassinen auf der Insel Blackreef in einer Zeitschleife, einem Loop, gefangen und sind dazu verdammt, den gleichen Tag bis in alle Ewigkeit wieder und wieder zu durchleben. Sie schlüpfen in die Rolle von Colt. Ihr Ziel: den Loop zu brechen. Dafür müssen Sie acht Ziele ausschalten, bevor die Uhr sich wieder zurücksetzt. Lernen Sie von jedem Kreislauf – probieren Sie neue Wege, sammeln Sie Informationen und eignen Sie sich neue Waffen und Fähigkeiten an.",
+    "images": ["808f7921-4524-4574-9f7b-92a2dd8c6ad5.jpg"]
+  },
+  {
+    "id": 14,
+    "name": "Hades",
+    "price": 19.99,
+    "description": "A rogue-lite hack and slash dungeon crawler in which Zagreus, son of Hades the Greek god of the dead, attempts to escape his home and his oppressive father by fighting the souls of the dead through the various layers of the ever-shifting underworld, while getting to know and forging relationships with its inhabitants.",
+    "images": ["6ee01c61-f475-44a6-8d60-96f34d7a73a1.jpg"]
+  },
+  {
+    "id": 15,
+    "name": "Detroit: Become Human",
     "price": 29.99,
-    "images": ["../images/test3.jpg"]
+    "description": "Detroit: Become Human puts the destiny of both mankind and androids in your hands, taking you to a near future where machines have become more intelligent than humans. Every choice you make affects the outcome of the game, with one of the most intricately branching narratives ever created.",
+    "images": ["28eff493-8eb3-4bbd-95fb-9edb4ffcf77e.jpg"]
+  },
+  {
+    "id": 16,
+    "name": "Kena: Bridge of Spirits",
+    "price": 39.99,
+    "description": "A story-driven action adventure with a stunning visual aesthetic combining exploration with fast-paced combat. Players find and grow a team of charming spirit companions called the Rot, enhancing their abilities and creating new ways to manipulate the environment. Kena: Bridge of Spirits seamlessly blends action and narrative into an unforgettable experience. Travel with Kena, a young Spirit Guide on a quest to uncover the mysterious story surrounding the demise of the village.",
+    "images": ["00ec3156-e509-47b5-bf2a-6776b0b14a54.jpg"]
+  },
+  {
+    "id": 17,
+    "name": "The Elder Scrolls V: Skyrim",
+    "price": 19.99,
+    "description": "Skyrim wurde mit mehr als als 200 'Spiel des Jahres'-Auszeichnungen prämiert, die Skyrim Special Edition erweckt den epischen Fantasy-Meilenstein mit verblüffender Detailfülle zu neuem Leben. Die Special Edition enthält das Spiel samt Add-ons und bietet neue Features wie überarbeitete Grafiken und Effekte, volumetrische Strahlenbüschel, dynamische Tiefenschärfe, Screen Space Reflections und einiges mehr, und gibt auch Konsolenspielern Zugriff auf PC-Mods. Neue Quests, Umgebungen, Charaktere, Dialoge, Rüstungen, Waffen und mehr – dank Mods sind Ihrem Spielerlebnis keine Grenzen gesetzt.",
+    "images": ["73e9ad81-e876-495b-9666-9307c5aa0a61.jpg"]
+  },
+  {
+    "id": 18,
+    "name": "The Last of Us",
+    "price": 19.99,
+    "description": "The Last of Us Remastered is an updated release of the PS3 game The Last of Us. It is identical to the PS3 version but runs at a 1080p resolution and incorporates character models with a higher resolution. There are also improved shadows and lighting, upgraded textures, 60 frames per second and other types of improvements. In addition to the base game, two map packs and the expansion The Last of Us: Left Behind are included.",
+    "images": ["b1e72218-4cba-4347-bc41-3e49a07d11f7.jpg"]
+  },
+  {
+    "id": 19,
+    "name": "Dishonored 2",
+    "price": 5.99,
+    "description": "Spielen Sie auf Ihre Art in einer Welt, in der Mystik und Technologie kollidieren. Schlüpfen Sie in die Rolle von Kaiserin Emily Kaldwin oder ihres Kaiserlichen Schutzherrn Corvo Attano? Werden Sie sich ungesehen Ihren Weg durch das Spiel bahnen, vollen Gebrauch vom kompromisslosen Kampfsystem machen – oder eine Mischung aus beidem wählen? Wie werden Sie die besonderen Kräfte, Waffen und Hilfsmittel Ihres Charakters kombinieren, um Ihre Gegner auszuschalten? Die Story reagiert auf Ihre Entscheidungen und nimmt verblüffende Wendungen, während Sie die ausgeklügelten Missionen des Spiels angehen.",
+    "images": ["8d27fb6e-9dd5-423c-9665-e7158032d6b8.jpg"]
+  },
+  {
+    "id": 20,
+    "name": "Assassin's Creed Odyssey",
+    "price": 29.99,
+    "description": "Write your own epic odyssey and become a legendary Spartan hero in Assassin's Creed Odyssey, an inspiring adventure where you must forge your destiny and define your own path in a world on the brink of tearing itself apart. Influence how history unfolds as you experience a rich and ever-changing world shaped by your decisions.",
+    "images": ["92aa6a06-0784-4aee-9476-e54e6adcb495.jpg"]
+  },
+  {
+    "id": 21,
+    "name": "Halo: The Master Chief Collection",
+    "price": 59.99,
+    "description": "The improved and enhanced Halo: The Master Chief Collection features visual enhancements with up to 4K UHD resolution, improved matchmaking, offline LAN, customizable installation options, and faster load times, it’s the definitive way to experience the ultimate Halo saga. Includes the extensive suite of campaign, multiplayer and additional features from Halo: Combat Evolved Anniversary, Halo 2: Anniversary, Halo 3, and Halo 4 - all updated to run at 60FPS.",
+    "images": ["e0669d5d-75fe-41a1-807a-be15a0fc14a4.jpg"]
+  },
+  {
+    "id": 22,
+    "name": "Cyberpunk 2077",
+    "price": 39.99,
+    "description": "Cyberpunk 2077 ist ein Open-World-Action-Adventure-RPG, bei dem du in Night City einen Cyberpunk-Söldner spielst, der ums Überleben kämpft. Passe deinen Charakter und deinen Spielstil nach Belieben an, während du Aufträge annimmst, deinen Ruf verbesserst und Upgrades freischaltest – jetzt mit Verbesserungen und brandneuen, kostenlosen Bonus-Inhalten! Deine Beziehungen mit anderen Charakteren und deine Entscheidungen verändern die Geschichte und die Welt um dich herum. Hier entstehen Legenden. Wie wird deine aussehen?",
+    "images": ["df18d34b-a69a-4434-9a26-5be9bdbf0686.jpg"]
+  },
+  {
+    "id": 23,
+    "name": "Ori and the Blind Forest",
+    "price": 29.99,
+    "description": "The forest of Nibel is dying. After a powerful storm sets a series of devastating events in motion, Ori must journey to find courage and confront a dark nemesis to save the forest of Nibel. “Ori and the Blind Forest” tells the tale of a young orphan destined for heroics, through a visually stunning Action-Platformer crafted by Moon Studios. Featuring hand-painted artwork, meticulously animated character performance, a fully orchestrated score and dozens of new features in the Definitive Edition, “Ori and the Blind Forest” explores a deeply emotional story about love and sacrifice, and the hope that exists in us all.",
+    "images": ["d5aa77c4-2ea6-4cd2-b3ac-f41a940eed55.jpg"]
+  },
+  {
+    "id": 24,
+    "name": "Star Wars Jedi: Fallen Order",
+    "price": 49.99,
+    "description": "Star Wars Jedi: Fallen Order is a narratively driven, single-player game puts you in the role of a Jedi Padawan who narrowly escaped the purge of Order 66 following the events of Episode III: Revenge of the Sith. On a quest to rebuild the Jedi Order, you must pick up the pieces of your shattered past to complete your training, develop new powerful Force abilities and master the art of the iconic lightsaber - all while staying one step ahead of the Empire and its deadly Inquisitors.",
+    "images": ["52eb2d04-88d1-429d-9f30-14cf450bd7f9.jpg"]
   }
 ]
