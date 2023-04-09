@@ -31,7 +31,7 @@ function Item({ id, name, description, images, price, onAdd }) {
         </h1>
         <p className="pb-8 text-slate-600 dark:text-slate-300">{description}</p>
         <div className="flex flex-row items-center justify-between">
-          <CountInput count={count} onChange={setCount} />
+          <CountInput count={count} onChange={setCount} min={1} max={99} />
           <p className="text-2xl font-semibold text-slate-800 dark:text-white">
             {(price * count).toFixed(2)}$
           </p>

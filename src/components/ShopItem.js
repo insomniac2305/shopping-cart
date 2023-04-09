@@ -8,13 +8,6 @@ function ShopItem({ id, name, image, price, onAdd }) {
   const [count, setCount] = useState(1);
   const [imgPath, setImgPath] = useState(null);
 
-  const handleCountChange = (value) => {
-    const parsedValue = parseInt(value) || 1;
-    if (parsedValue > 0 && parsedValue < 100) {
-      setCount(parsedValue);
-    }
-  };
-
   useEffect(() => {
     const loadImage = async () => {
       const loadedImg = await import(`../images/${image}`);
@@ -39,7 +32,7 @@ function ShopItem({ id, name, image, price, onAdd }) {
       </Link>
       <div className="flex flex-col gap-2 p-2">
         <div className="flex flex-row items-center justify-between">
-          <CountInput count={count} onChange={handleCountChange} />
+          <CountInput count={count} onChange={setCount} min={1} max={99} />
           <h3 className="text-lg font-semibold tracking-tighter dark:text-white ">
             {(price * count).toFixed(2)}$
           </h3>
