@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkshopping_cart=self.webpackChunkshopping_cart||[]).push([[995],{995:function(c,e,a){c.exports=a.p+"static/media/b1e72218-4cba-4347-bc41-3e49a07d11f7.2b18acb7af9dc9e016e1.jpg"}}]);
