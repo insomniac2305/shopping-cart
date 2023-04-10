@@ -1,4 +1,4 @@
-import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import { createHashRouter, Outlet, RouterProvider } from "react-router-dom";
 import Cart from "./Cart";
 import Home from "./Home";
 import Shop from "./Shop";
@@ -86,7 +86,7 @@ function App() {
     },
   ];
 
-  const router = createBrowserRouter(routes);
+  const router = createHashRouter(routes);
 
   return <RouterProvider router={router} />;
 }
