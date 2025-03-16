@@ -50,7 +50,7 @@ This project is part of [The Odin Project's curriculum](https://www.theodinproje
 1. Clone the repository:
 
    ```
-   git clone [repository-url]
+   git clone https://github.com/insomniac2305/shopping-cart.git
    cd gameshop
    ```
 
